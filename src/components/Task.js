@@ -6,7 +6,7 @@ function Task({ task, onDeleteTask }) {
   };
 
   return (
-    <div className="task">
+    <div className="task" data-testid="task-item">
       <div className="label">{task.category}</div>
       <div className="text">{task.text}</div>
       <button className="delete" onClick={handleDeleteClick}>

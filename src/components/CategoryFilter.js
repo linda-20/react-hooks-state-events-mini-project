@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-function CategoryFilter({ categories }) {
+function CategoryFilter({ categories, onCategoryChange }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    // Call the callback function to inform the parent component about the category change
+    onCategoryChange(category);
   };
 
   return (
